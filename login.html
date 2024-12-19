@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ScrideEd</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <a href="/" class="logo"><img src="/assets/icons/logo-black-rbg.png" alt="Scride Ed"></a>
+                <h1>Welcome Back!</h1>
+                <p>Sign in to continue your learning journey</p>
+            </div>
+
+            <div class="login-options">
+                <button id="googleLoginBtn" class="google-btn">
+                    <img src="assets/images/google-icon.svg" alt="Google">
+                    Continue with Google
+                </button>
+
+                <div class="divider">
+                    <span>or</span>
+                </div>
+
+                <form id="loginForm" class="login-form">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" required>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="login-btn">Sign In</button>
+                </form>
+            </div>
+
+            <div class="login-footer">
+                <p>Don't have an account? <a href="/signup">Sign up</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyDs8LgmOqK0gWPC5UROvqy__2Q8rsVIa0k",
+          authDomain: "scrideedlogin.firebaseapp.com",
+          projectId: "scrideedlogin",
+          storageBucket: "scrideedlogin.firebasestorage.app",
+          messagingSenderId: "250991819646",
+          appId: "1:250991819646:web:2b95a1f7b0c3bfeb3dd12f",
+          measurementId: "G-ZV1780RJ0Q"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+    <script src="scripts/auth.js" type="module"></script>
+</body>
+</html>
