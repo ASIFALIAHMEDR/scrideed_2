@@ -107,7 +107,7 @@
   
   /* Hero Section */
   .hero {
-    padding: 8rem 0 4rem;
+    padding: 8rem 0 10rem;
     display: flex; /* Enables side-by-side alignment */
   justify-content: space-between; /* Space between text and image */
   align-items: center; /* Vertically align both elements */
@@ -127,6 +127,7 @@
   .hero-image {
     max-width: 60%; /* Adjust image container width */
     text-align: right; /* Align the image to the right */
+    padding: auto;
   }
   
   .hero-image img {
