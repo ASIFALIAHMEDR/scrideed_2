@@ -58,6 +58,26 @@
   max-width: 100%; /* Optional for responsiveness */
   display: block; 
   }
+
+  .mobile-menu-toggle {
+    display: block; /* Ensure the button shows on smaller screens */
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    background: var(--color-background);
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none; /* Initially hidden */
+  }
+  
+  .nav-links.active {
+    display: flex; /* Show links when toggled */
+  }
   
   .nav-links {
     display: flex;
@@ -135,6 +155,23 @@
     max-width: 600px; /* Optional: Set a max size for the image */
     height: auto; /* Maintain aspect ratio */
   }
+
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column; /* Stack text and image */
+      text-align: center;
+    }
+  
+    .hero-image {
+      max-width: 100%; /* Ensure the image resizes */
+      text-align: center;
+    }
+  
+    .hero h1 {
+      font-size: 1.75rem; /* Reduce font size for mobile */
+    }
+  }
+  
   
   /* Features Section */
   .features {
@@ -165,6 +202,17 @@
     color: var(--color-primary);
     margin-bottom: 1rem;
   }
+
+  @media (max-width: 768px) {
+    .features-grid, .course-grid {
+      grid-template-columns: 1fr; /* Single column layout */
+    }
+  
+    .feature-card, .course-card {
+      padding: 1rem; /* Adjust padding */
+    }
+  }
+  
   
   /* Courses Section */
   .courses {
@@ -200,6 +248,13 @@
     padding: 0.25rem 1rem;
     border-radius: 1rem;
     font-size: 0.875rem;
+  }
+  
+  @media (max-width: 768px) {
+    .btn-primary, .btn-secondary {
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+    }
   }
   
   /* Newsletter Section */
@@ -273,6 +328,15 @@
     text-align: center;
     padding-top: 2rem;
     border-top: 1px solid #374151;
+  }
+  @media (max-width: 768px) {
+    .footer-grid {
+      grid-template-columns: 1fr; /* Single column */
+    }
+  
+    .footer-column {
+      margin-bottom: 2rem; /* Add spacing between sections */
+    }
   }
   
   /* Responsive Design */
