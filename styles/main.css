@@ -185,7 +185,13 @@
     }
   
     .hero h1 {
-      font-size: 1.75rem; /* Reduce font size for mobile */
+      font-size: 1rem; /* Reduce font size for mobile */
+    }
+
+    .hero .highlight {
+      font-size: 1.75rem;
+      text-align: center;
+
     }
   }
   
@@ -205,6 +211,7 @@
     font-size: 3rem;
     line-height: 1.2;
     margin-bottom: 1.5rem;
+    padding: auto;
   }
   
   .empower .highlight {
@@ -237,7 +244,10 @@
   
     .empower h1 {
       font-size: 1.75rem; /* Reduce font size for mobile */
+      text-align: center;
+      padding: auto;
     }
+
   }
 
   /* Features Section */
