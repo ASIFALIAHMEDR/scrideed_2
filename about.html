@@ -31,9 +31,9 @@
             
             <ul class="nav-links">
                 <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
+                <li><a href="/about.html">About</a></li>
                 <li><a href="/courses.html">Courses</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li><a href="/pages/contact.html">Contact</a></li>
                 <li><a href="/login.html" class="btn-login">Login</a></li>
                 <li><a href="/login.html" class="btn-primary">Get Started</a></li>
             </ul>
@@ -41,8 +41,226 @@
     </header>
 
     <main>
-    
-        <!-- todo add a get started  -->
+        <style>
+            .team-section {
+              padding: 80px 0;
+              background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            }
+          
+            .team-container {
+              max-width: 1200px;
+              margin: 0 auto;
+              padding: 0 20px;
+            }
+          
+            .team-header {
+              text-align: center;
+              margin-bottom: 60px;
+            }
+          
+            .team-header h2 {
+              font-size: 2.5rem;
+              color: #333;
+              margin-bottom: 20px;
+              font-weight: 700;
+            }
+          
+            .team-header p {
+              font-size: 1.1rem;
+              color: #666;
+              max-width: 600px;
+              margin: 0 auto;
+              line-height: 1.6;
+            }
+          
+            .team-grid {
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+              gap: 40px;
+              padding: 20px;
+            }
+          
+            .team-member {
+              background: white;
+              border-radius: 20px;
+              overflow: hidden;
+              box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+              position: relative;
+            }
+          
+            .team-member:hover {
+              transform: translateY(-10px);
+              box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            }
+          
+            /* .member-image {
+              width: 100%;
+              height: 300px;
+              position: relative;
+              overflow: hidden;
+            }
+          
+            .member-image img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              transition: transform 0.5s ease;
+            } */
+            .member-image {
+                width: 100%;
+                height: 300px;
+                position: relative;
+                overflow: hidden;
+                padding: 20px; /* Added padding */
+            }
+
+            .member-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.5s ease;
+                border-radius: 15px; /* Added to give the image rounded corners */
+            }
+          
+            .team-member:hover .member-image img {
+              transform: scale(1.1);
+            }
+          
+            .member-info {
+              padding: 25px;
+              text-align: center;
+            }
+          
+            .member-info h3 {
+              font-size: 1.5rem;
+              color: #333;
+              margin-bottom: 10px;
+            }
+          
+            .member-info .role {
+              color: #666;
+              font-size: 1.1rem;
+              margin-bottom: 15px;
+            }
+          
+            .member-bio {
+              color: #777;
+              font-size: 0.95rem;
+              line-height: 1.6;
+              margin-bottom: 20px;
+              height: 0;
+              opacity: 0;
+              overflow: hidden;
+              transition: all 0.3s ease;
+            }
+          
+            .team-member:hover .member-bio {
+              height: 80px;
+              opacity: 1;
+            }
+          
+            .social-links {
+              display: flex;
+              justify-content: center;
+              gap: 15px;
+              padding-top: 15px;
+              border-top: 1px solid #eee;
+            }
+          
+            .social-links a {
+              width: 35px;
+              height: 35px;
+              border-radius: 50%;
+              background: #f8f9fa;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #333;
+              text-decoration: none;
+              transition: all 0.3s ease;
+            }
+          
+            .social-links a:hover {
+              background: #007bff;
+              color: white;
+              transform: rotate(360deg);
+            }
+          
+            @media (max-width: 768px) {
+              .team-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+              }
+            }
+          </style>
+          
+          <section class="team-section">
+            <div class="team-container">
+              <div class="team-header">
+                <h2>Meet Our Team</h2>
+                <p>Passionate educators and technology enthusiasts working together to revolutionize online learning.</p>
+              </div>
+              
+              <div class="team-grid">
+                <!-- Team Member 1 -->
+                <div class="team-member">
+                  <div class="member-image">
+                    <img src="/assets/images/asif.png" alt="Asif Ali Ahmed R">
+                  </div>
+                  <div class="member-info">
+                    <h3>Asif Ali Ahmed R</h3>
+                    <div class="role">Chief Technical Officer</div>
+                    <div class="member-bio">
+                    A tech innovator with expertise in building scalable educational platforms and interactive learning tools.
+                    </div>
+                    <div class="social-links">
+                      <a href="#"><i class="fab fa-linkedin"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                      <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                  </div>
+                </div>
+          
+                <!-- Team Member 2 -->
+                <div class="team-member">
+                  <div class="member-image">
+                    <img src="/assets/images/pandyan.png" alt="Pandyan K">
+                  </div>
+                  <div class="member-info">
+                    <h3>Pandyan K</h3>
+                    <div class="role">Chief Executive Officer</div>
+                    <div class="member-bio">
+                      A tech innovator with expertise in building scalable educational platforms and interactive learning tools.
+                    </div>
+                    <div class="social-links">
+                      <a href="#"><i class="fab fa-linkedin"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                      <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                  </div>
+                </div>
+          
+                <!-- Team Member 3 -->
+                <div class="team-member">
+                  <div class="member-image">
+                    <img src="/api/placeholder/400/300" alt="Fardeen Ahmed">
+                  </div>
+                  <div class="member-info">
+                    <h3>Fardeen Ahmed</h3>
+                    <div class="role">Head of Content</div>
+                    <div class="member-bio">
+                      An experienced educator passionate about creating engaging and effective learning experiences.
+                    </div>
+                    <div class="social-links">
+                      <a href="#"><i class="fab fa-linkedin"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                      <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
     </main>
 
     <footer class="site-footer">

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScrideEd - Course Details</title>
+    <link rel="icon" type="image/png" href="scrideGearLogo-rbg.png"/>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <style>
+        /* Previous styles remain the same */
+        
+        /* Add styles for course cards to make them clickable */
+        .course-card {
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        /* Course Detail Page Styles */
+        .course-detail {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .course-header {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .course-header {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .course-info h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+
+        .course-preview {
+            background: #f8fafc;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .preview-price {
+            font-size: 2rem;
+            color: #4f46e5;
+            margin-bottom: 1rem;
+        }
+
+        .enroll-btn {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            background: #4f46e5;
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .enroll-btn:hover {
+            background: #4338ca;
+        }
+
+        .course-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .course-content-section {
+            margin-top: 3rem;
+        }
+
+        .content-tabs {
+            display: flex;
+            gap: 1rem;
+            border-bottom: 2px solid #e5e7eb;
+            margin-bottom: 2rem;
+        }
+
+        .content-tab {
+            padding: 1rem 2rem;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -2px;
+        }
+
+        .content-tab.active {
+            border-bottom-color: #4f46e5;
+            color: #4f46e5;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .curriculum-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .curriculum-item {
+            padding: 1rem;
+            border: 1px solid #e5e7eb;
+            margin-bottom: 0.5rem;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .instructor-section {
+            display: flex;
+            gap: 2rem;
+            align-items: start;
+            margin-top: 2rem;
+        }
+
+        .instructor-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .reviews-grid {
+            display: grid;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .review-card {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .review-header {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .reviewer-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<!-- Course Detail Page Template -->
+<body>
+    <!-- Header/Nav remains the same -->
+
+    <main class="course-detail">
+        <div class="course-header">
+            <div class="course-info">
+                <span class="course-tag">Programming</span>
+                <h1>Full Stack Web Development</h1>
+                <div class="course-meta">
+                    <span class="course-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        4.5 (128 reviews)
+                    </span>
+                    <span class="course-students">
+                        <i class="fas fa-users"></i>
+                        1,234 students enrolled
+                    </span>
+                </div>
+                <p>Learn to build modern web applications from front to back end using the latest technologies.</p>
+            </div>
+            
+            <div class="course-preview">
+                <div class="preview-price">$99.99</div>
+                <a href="#" class="enroll-btn">Enroll Now</a>
+                <div class="course-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-clock"></i>
+                        <span>24 hours</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-video"></i>
+                        <span>42 lessons</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-certificate"></i>
+                        <span>Certificate</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-infinity"></i>
+                        <span>Lifetime access</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-content-section">
+            <div class="content-tabs">
+                <div class="content-tab active">Curriculum</div>
+                <div class="content-tab">Description</div>
+                <div class="content-tab">Instructor</div>
+                <div class="content-tab">Reviews</div>
+            </div>
+
+            <div class="tab-content active" id="curriculum">
+                <ul class="curriculum-list">
+                    <li class="curriculum-item">
+                        <span>1. Introduction to Web Development</span>
+                        <span>45 min</span>
+                    </li>
+                    <li class="curriculum-item">
+                        <span>2. HTML & CSS Fundamentals</span>
+                        <span>1.5 hrs</span>
+                    </li>
+                    <li class="curriculum-item">
+                        <span>3. JavaScript Basics</span>
+                        <span>2 hrs</span>
+                    </li>
+                    <!-- Add more curriculum items -->
+                </ul>
+            </div>
+
+            <div class="tab-content" id="description">
+                <h3>Course Description</h3>
+                <p>Detailed course description goes here...</p>
+                <!-- Add more description content -->
+            </div>
+
+            <div class="tab-content" id="instructor">
+                <div class="instructor-section">
+                    <img src="/api/placeholder/120/120" alt="Instructor" class="instructor-image">
+                    <div class="instructor-info">
+                        <h3>John Doe</h3>
+                        <p>Senior Web Developer with 10+ years of experience</p>
+                        <!-- Add more instructor details -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="reviews">
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="/api/placeholder/50/50" alt="Reviewer" class="reviewer-image">
+                            <div>
+                                <h4>Jane Smith</h4>
+                                <div class="course-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    5.0
+                                </div>
+                            </div>
+                        </div>
+                        <p>Great course! The instructor explains everything clearly...</p>
+                    </div>
+                    <!-- Add more review cards -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer remains the same -->
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            offset: 100,
+            once: true
+        });
+
+        // Tab switching functionality
+        const tabs = document.querySelectorAll('.content-tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs and contents
+                tabs.forEach(t => t.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked tab and corresponding content
+                tab.classList.add('active');
+                tabContents[index].classList.add('active');
+            });
+        });
+
+        // Modify your course cards in courses.html to link to the detail page:
+        // Add this to each course card:
+        // onclick="window.location.href='/course-detail.html?id=COURSE_ID'"
+    </script>
+</body>
+</html>
