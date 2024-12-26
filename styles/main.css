@@ -27,6 +27,8 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1.5rem;
+    text-overflow:ellipsis;
+    
   }
   /* Loader */
 
@@ -364,6 +366,7 @@
     font-size: 3rem;
     line-height: 1.2;
     margin-bottom: 1.5rem;
+    text-overflow: ellipsis;
   }
   
   .hero .highlight {
@@ -444,14 +447,14 @@
   }
 
   .empower-image {
-    max-width: 60%; /* Adjust image container width */
+    max-width: 150%; /* Adjust image container width */
     text-align: right; /* Align the image to the right */
     padding: auto;
   }
   
   .empower-image img {
     width: 100%; /* Make the image responsive */
-    max-width: 250px; /* Optional: Set a max size for the image */
+    max-width: 500px; /* Optional: Set a max size for the image */
     height: auto; /* Maintain aspect ratio */
   }
 
