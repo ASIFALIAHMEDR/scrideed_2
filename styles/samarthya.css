@@ -1,0 +1,271 @@
+:root {
+    --primary-color: #6C63FF;
+    --secondary-color: #FF6B6B;
+    --accent-color: #4CAF50;
+    --gradient-1: linear-gradient(135deg, #6C63FF 0%, #FF6B6B 100%);
+    --gradient-2: linear-gradient(45deg, #FF6B6B 0%, #FFD93D 100%);
+    --text-color: #2D3436;
+    --light-text: #636E72;
+    --bg-color: #ffffff;
+    --section-bg: #F8F9FD;
+    --card-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    --neon-shadow: 0 0 10px rgba(108, 99, 255, 0.5);
+}
+
+/* Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Modern Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--bg-color);
+    overflow-x: hidden;
+}
+
+/* Enhanced Navigation */
+.navbar {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 0;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: var(--neon-shadow);
+}
+
+/* 3D Hero Section */
+.hero {
+    background: 
+        radial-gradient(circle at 10% 20%, rgba(108, 99, 255, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 20%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="rgba(108, 99, 255, 0.1)" d="M47.5,-61.5C59.9,-52.8,67.3,-35.9,70.7,-18.1C74.1,-0.3,73.5,18.3,65.8,32.4C58.1,46.5,43.3,56.1,27.4,61.5C11.5,66.9,-5.5,68.1,-22.2,64.1C-38.9,60.1,-55.3,50.9,-65.1,36C-74.9,21.1,-78.1,0.5,-73.8,-17.8C-69.5,-36.1,-57.7,-52.1,-43,-60.4C-28.3,-68.7,-10.7,-69.3,4.3,-74.6C19.3,-79.9,35.1,-70.1,47.5,-61.5Z" transform="translate(100 100)" /></svg>') no-repeat center;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.hero-content {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    transform: translateZ(50px);
+    text-shadow: 2px 2px 0px var(--primary-color);
+}
+
+.cta-buttons {
+    transform: translateZ(30px);
+}
+
+/* 3D Cards */
+.about-card, .why-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover, .why-card:hover {
+    transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+    box-shadow: 
+        0 20px 40px rgba(108, 99, 255, 0.2),
+        0 0 20px rgba(108, 99, 255, 0.1);
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.why-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Glowing Elements */
+.btn-primary {
+    background: var(--gradient-1);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 5px 15px rgba(108, 99, 255, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(108, 99, 255, 0.6);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* FAQ Section Enhancement */
+.faq-item {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow);
+}
+
+/* Sponsor Section */
+.sponsor-logo {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.sponsor-logo:hover {
+    transform: scale(1.05);
+    box-shadow: var(--card-shadow);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--section-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        padding: 2rem;
+        transition: left 0.3s ease;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+    .hero-shapes {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        pointer-events: none;
+    }
+    
+    .shape {
+        position: absolute;
+        backdrop-filter: blur(5px);
+        border-radius: 50%;
+    }
+    
+    .shape-1 {
+        background: linear-gradient(45deg, rgba(108, 99, 255, 0.3), rgba(255, 107, 107, 0.3));
+        width: 300px;
+        height: 300px;
+        top: -50px;
+        right: -100px;
+        animation: float 6s ease-in-out infinite;
+    }
+    
+    .shape-2 {
+        background: linear-gradient(45deg, rgba(76, 175, 80, 0.3), rgba(255, 217, 61, 0.3));
+        width: 200px;
+        height: 200px;
+        bottom: 50px;
+        left: -50px;
+        animation: float 8s ease-in-out infinite;
+    }
+    
+    .shape-3 {
+        background: linear-gradient(45deg, rgba(255, 107, 107, 0.3), rgba(108, 99, 255, 0.3));
+        width: 150px;
+        height: 150px;
+        bottom: 50px;
+        right: 30%;
+        animation: float 7s ease-in-out infinite;
+    }
+    
+    .card-3d-content {
+        transform-style: preserve-3d;
+        transition: transform 0.3s ease;
+    }
+    
+    .card-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+        transform: translateZ(-10px);
+        border-radius: 20px;
+    }
+}
