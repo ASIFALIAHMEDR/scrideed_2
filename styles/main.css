@@ -654,7 +654,240 @@
       font-size: 0.875rem;
     }
   }
-  
+  /* announcement section */
+  /* Announcement Section Styles */
+.announcement-section {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #f6f9fc 0%, #ffffff 100%);
+  overflow: hidden;
+}
+
+.announcement-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.announcement-header {
+  text-align: center;
+  margin-bottom: 60px;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.announcement-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: slideInUp 0.6s ease forwards 0.3s;
+}
+
+.announcement-title {
+  font-size: 3rem;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: slideInUp 0.6s ease forwards 0.5s;
+}
+
+.announcement-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: slideInUp 0.6s ease forwards 0.7s;
+}
+
+/* Grid Layout */
+.announcement-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin: 60px 0;
+}
+
+.announcement-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: calc(var(--card-index) * 0.2s);
+}
+
+.announcement-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.announcement-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #1a1a1a;
+}
+
+.announcement-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Features Section */
+.announcement-features {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 60px 0;
+}
+
+.feature {
+  text-align: center;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: calc(var(--feature-index) * 0.2s);
+}
+
+.feature-highlight {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #6a11cb;
+  margin-bottom: 5px;
+}
+
+.feature-text {
+  color: #666;
+}
+
+/* CTA Section */
+.announcement-cta {
+  text-align: center;
+  margin-top: 60px;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards 1.2s;
+}
+
+.primary-button, .secondary-button {
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 10px;
+}
+
+.primary-button {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  box-shadow: 0 10px 20px rgba(106, 17, 203, 0.2);
+}
+
+.secondary-button {
+  background: white;
+  color: #6a11cb;
+  border: 2px solid #6a11cb;
+}
+
+.primary-button:hover, .secondary-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(106, 17, 203, 0.3);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Mobile Optimizations */
+@media screen and (max-width: 768px) {
+  .announcement-section {
+      padding: 60px 20px;
+  }
+
+  .announcement-title {
+      font-size: 2.2rem;
+  }
+
+  .announcement-subtitle {
+      font-size: 1rem;
+  }
+
+  .announcement-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+  }
+
+  .announcement-features {
+      flex-direction: column;
+      gap: 30px;
+  }
+
+  .feature-highlight {
+      font-size: 1.5rem;
+  }
+
+  .announcement-cta {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding: 0 20px;
+  }
+
+  .primary-button, .secondary-button {
+      width: 100%;
+      text-align: center;
+      margin: 0;
+  }
+}
+
+/* Performance Optimizations */
+@media (prefers-reduced-motion: reduce) {
+  .announcement-card,
+  .feature,
+  .announcement-header,
+  .announcement-badge,
+  .announcement-title,
+  .announcement-subtitle,
+  .announcement-cta {
+      animation: none;
+      opacity: 1;
+      transform: none;
+  }
+}
   /* Newsletter Section */
   .newsletter {
     padding: 4rem 0;
