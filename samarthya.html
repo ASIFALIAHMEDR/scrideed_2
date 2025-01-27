@@ -3,218 +3,315 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ScrideEd - Learn.Dream.Build.</title>
-    <link rel="icon" type="image/png" href="scrideGearLogo-rbg.png"/>
-
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles/main.css">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Samarthya 2025</title>
+    <link rel="stylesheet" href="../styles/samarthya.css">
 </head>
 <body>
-    <div class="loader-wrapper" id="loader">
-        <div class="loader">
-            <div class="loader-circle"></div>
-            <div class="loader-line-mask">
-                <div class="loader-line"></div>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Samarthya</div>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#judges">Judges</a></li>
+            <li><a href="#panelists">Panelists</a></li>
+            <li><a href="#faqs">FAQs</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Samarthya 2025</h1>
+            <p>Transform Your Boldest Ideas into Reality</p>
+            <div class="hero-stats">
+                <div>
+                    <h3>500+</h3>
+                    <span>Participants</span>
+                </div>
+                <div>
+                    <h3>500000</h3>
+                    <span>Prize Pool</span>
+                </div>
+                <div>
+                    <h3>10</h3>
+                    <span>Top Awards</span>
+                </div>
             </div>
-            <div class="loader-logo">
-                <!-- <span>ScrideEd</span> -->
-                <img src="assets/icons/scrideGearLogo-rbg.png">
-            </div>
+            <a href="#register" class="cta-button">Register Now</a>
         </div>
-        <!-- <div class="loader-text">.<br>Loading amazing content...</div> -->
-    </div>
-    <!-- <header class="site-header">
-        <nav class="main-nav container">
-            <div class="logo-container">
-            <a href="/" class="logo"><img src="../assets/icons/logo-black-rbg.png" alt="Scride Ed"></a>
-            </div>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                <span></span>
-            </button>
-            
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/about.html">About</a></li>
-                <li><a href="/courses.html">Courses</a></li>
-                <li><a href="/pages/contact.html">Contact</a></li>
-                <li><a href="/login.html" class="btn-login">Login</a></li>
-                <li><a href="/login.html" class="btn-primary">Get Started</a></li>
-            </ul>
-        </nav>
-    </header> -->
+    </section>
 
-    <header class="site-header">
-        <nav class="main-nav container">
-            <div class="logo-container">
-                Samarthya 2025
+    <!-- Timeline Section -->
+    <section id="timeline">
+        <h2>Event Journey</h2>
+        <div class="timeline-container">
+            <div class="timeline-item">
+                <div class="timeline-icon">📅</div>
+                <div class="timeline-content">
+                    <h3>Registration Opens</h3>
+                    <p>February 1, 2024</p>
+                    <small>Online Applications Begin</small>
+                </div>
             </div>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                <span class="hamburger"></span>
-            </button>
-            
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/about.html">About</a></li>
-                <li><a href="/courses.html">Speakers</a></li>
-                <li><a href="/pages/contact.html">Sponsors</a></li>
-                <li><a href="/login.html" class="btn-login">FAQs</a></li>
-                <li><a href="/login.html" class="btn-primary">Register</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <h1>
-                    <p class="empower-content">Learn.Dream..Build...</p>
-                    Unlock Your Potential with Our<br>
-                    Cutting-Edge Courses
-                </h1>
-                <a href="#explore" class="btn-primary">Register Now!</a>
+            <div class="timeline-item">
+                <div class="timeline-icon">💡</div>
+                <div class="timeline-content">
+                    <h3>Idea Submission</h3>
+                    <p>February 15, 2024</p>
+                    <small>Submit Your Innovative Concepts</small>
+                </div>
             </div>
-            <figure class="hero-image">
-                <!-- make it transprant bg  -->
-                <img src="../assets/images/icon.png" alt="Hero Image">
-            </figure>
-        </section>
-    
-<!-- add empowering section -->
-    <section class="empower">
-        <div class="empower-wrapper">
-            <div class="empower-image">
-                <img src="../assets/images/empower-image.png" alt="Image">
-            </div>
-            <div class="empower-content">
-                <h1>
-                    <span class="highlight">Empowering the Next Generation</span>
-                    of Tech Leaders
-                </h1>
-                <p class="hero-text">
-                    At our cutting-edge education company, we're dedicated to transforming
-                    the lives of Indian teens by equipping them with the high-tech skills and
-                    industry-relevant knowledge they need to thrive in the digital age.
-                </p>
-                <a href="../courses.html" class="btn-primary">Explore now!</a>
+            <div class="timeline-item">
+                <div class="timeline-icon">🏆</div>
+                <div class="timeline-content">
+                    <h3>Final Presentations</h3>
+                    <p>February 22, 2024</p>
+                    <small>Live Pitch & Evaluation</small>
+                </div>
             </div>
         </div>
     </section>
 
-        <!-- Features Section -->
-         <!-- update this section with a heading and relevant content and add animations accordingly -->
-        <section class="features">
-            <div class="container">
-                <h1>Why Go Hands-On?</h1>
-                <h2>Bridging the Skills Gap</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <i class="fas fa-users"></i>
-                        <h3>Mentorship and Guidance</h3>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fas fa-laptop-code"></i>
-                        <h3>Hands-on Workshops</h3>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fas fa-comments"></i>
-                        <h3>Community Support</h3>
-                    </div>
+    <!-- Judges Section -->
+    <!-- <section id="judges">
+        <h2>Our Distinguished Judges</h2>
+        <div class="judges-container">
+            <div class="judge-card">
+                <img src="/api/placeholder/300/300" alt="Dr. Emily Roberts">
+                <h3>Dr. Emily Roberts</h3>
+                <p>Tech Innovation Expert</p>
+                <div class="judge-socials">
+                    <a href="#" class="social-icon">LinkedIn</a>
+                    <a href="#" class="social-icon">Twitter</a>
                 </div>
             </div>
-        </section>
-
-        <!-- Popular Courses -->
-        <section class="courses" id="explore">
-            <div class="container">
-                <!-- center the heading -->
-                <h1>Workshops That'll Supercharge Your Career</h1>
-                <div class="course-grid">
-                    <div class="course-card">
-                        <span class="badge">Registration Closing Soon</span>
-                        <h3>Robotics Bootcamp</h3>
-                        <p>Dive into the world of coding and build your own robot!</p>
-                        <span class="date">Jan 2024</span>
-                        <a href="https://forms.gle/HEQwnBu2qKFp6ERG7" class="btn-secondary">Register Now -></a>
-                    </div>
-                    <div class="course-card featured">
-                        <span class="badge">Most Popular</span>
-                        <h3>Arduino Bootcamp</h3>
-                        <p>Understand Arduino and create your first IOT project.</p>
-                        <span class="date">Feb 2024</span>
-                        <a href="https://forms.gle/LDaKzVf9h2hfmn22A" class="btn-secondary">Register Now -></a>
-                    </div>
+            <div class="judge-card">
+                <img src="/api/placeholder/300/300" alt="Michael Chang">
+                <h3>Michael Chang</h3>
+                <p>Startup Founder</p>
+                <div class="judge-socials">
+                    <a href="#" class="social-icon">LinkedIn</a>
+                    <a href="#" class="social-icon">Twitter</a>
                 </div>
             </div>
-        </section>
-
-        <!-- add why us section -->
-
-        <!-- Newsletter -->
-         <!-- add a plugin to collect the mail -->
-        <section class="newsletter">
-            <!-- <div class="container">
-                <h2>Stay Updated – Subscribe to Our Newsletter!</h2>
-                <p>Never miss out on the latest workshops, tips, and career advice.</p>
-                <form id="newsletter-form" class="subscribe-form">
-                    <input type="email" placeholder="Enter your email here" required>
-                    <button type="submit" class="btn-primary">Subscribe Now</button>
-                </form>
-            </div> -->
-            <div class="container">
-            <script src="https://static.elfsight.com/platform/platform.js" async></script>
-            <div class="elfsight-app-7f2de406-726d-4bf1-8327-9a756f93c13b" data-elfsight-app-lazy></div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Our Story</a></li>
-                        <li><a href="#">Our Team</a></li>
-                        <li><a href="https://www.linkedin.com/company/scrideed-com/">Careers</a></li>
-                    </ul>
+            <div class="judge-card">
+                <img src="/api/placeholder/300/300" alt="Sarah Martinez">
+                <h3>Sarah Martinez</h3>
+                <p>Education Technology Leader</p>
+                <div class="judge-socials">
+                    <a href="#" class="social-icon">LinkedIn</a>
+                    <a href="#" class="social-icon">Twitter</a>
                 </div>
-                <div class="footer-column">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="#">FAQs</a></li>
-                        <li><a href="https://www.linkedin.com/company/scrideed-com/">Blog</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/scride.ed/profilecard/?igsh=eGo5MHNpM2hpZmxw"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/company/scrideed-com/"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.instagram.com/scride.ed/profilecard/?igsh=eGo5MHNpM2hpZmxw"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Scride Ed, Inc. All rights reserved. </p>
             </div>
         </div>
+    </section> -->
+    
+    <section id="judges-panelists">
+        <h2>Judges & Panelists</h2>
+        <div class="coming-soon-container">
+            <div class="loading-animation">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <h3>Coming Soon!</h3>
+            <p>We're curating an exceptional panel of industry experts and innovators.</p>
+            <p>Stay tuned for the big reveal!</p>
+        </div>
+    </section>
+
+    <!-- Panelists Section -->
+    <!-- <section id="panelists">
+        <h2>Hackathon Day Panelists</h2>
+        <div class="panelists-container">
+            <div class="panelist-card">
+                <img src="/api/placeholder/250/250" alt="Alex Rodriguez">
+                <h3>Alex Rodriguez</h3>
+                <p>AI & Machine Learning Expert</p>
+                <small>Google Research</small>
+            </div>
+            <div class="panelist-card">
+                <img src="/api/placeholder/250/250" alt="Elena Kim">
+                <h3>Elena Kim</h3>
+                <p>Sustainability Innovation Lead</p>
+                <small>UN Climate Innovation Hub</small>
+            </div>
+            <div class="panelist-card">
+                <img src="/api/placeholder/250/250" alt="David Chen">
+                <h3>David Chen</h3>
+                <p>Entrepreneurship Mentor</p>
+                <small>Silicon Valley Accelerator</small>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- FAQs Section -->
+    <!-- <section id="faqs">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">Who can participate?</div>
+                <div class="faq-answer">Students aged 12-18 from any school or region can participate in the Ideathon.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Are there any registration fees?</div>
+                <div class="faq-answer">The Ideathon is completely free. No hidden charges or registration costs.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How will ideas be evaluated?</div>
+                <div class="faq-answer">Ideas will be judged on creativity, feasibility, potential impact, and innovation.</div>
+            </div>
+        </div>
+    </section> -->
+    <!-- <section id="faqs">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">Who can participate?</div>
+                <div class="faq-answer">
+                    Students aged 12-18 from any school or region can participate in the Ideathon. The competition is open to young innovators with creative ideas across various domains including technology, sustainability, education, and social impact.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Are there registration fees?</div>
+                <div class="faq-answer">
+                    The Ideathon is completely free. No hidden charges or registration costs. All interested students can apply through our online portal without any financial barriers.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How are ideas evaluated?</div>
+                <div class="faq-answer">
+                    Ideas will be judged on multiple criteria including creativity, feasibility, potential impact, innovation, presentation quality, and alignment with sustainable development goals.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What resources are provided?</div>
+                <div class="faq-answer">
+                    Participants receive mentorship, online workshops, access to learning resources, and guidance from industry experts throughout the Ideathon journey.
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- <section id="faqs">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-card">
+                <div class="faq-front">
+                    <h3>Who can participate? 🤔</h3>
+                </div>
+                <div class="faq-back">
+                    <p>Students aged 12-18 from any school or region can participate! We welcome young innovators interested in technology, design, and problem-solving.</p>
+                </div>
+            </div>
+    
+            <div class="faq-card">
+                <div class="faq-front">
+                    <h3>What's the registration process? 📝</h3>
+                </div>
+                <div class="faq-back">
+                    <p>Simple! Just fill out our online form, create your team (2-4 members), and submit your initial idea proposal. We'll guide you through each step.</p>
+                </div>
+            </div>
+    
+            <div class="faq-card">
+                <div class="faq-front">
+                    <h3>Are there any fees? 💰</h3>
+                </div>
+                <div class="faq-back">
+                    <p>Absolutely free! The ideathon is completely free for all participants. We believe in making innovation accessible to everyone.</p>
+                </div>
+            </div>
+    
+            <div class="faq-card">
+                <div class="faq-front">
+                    <h3>What can I win? 🏆</h3>
+                </div>
+                <div class="faq-back">
+                    <p>Amazing prizes await! Top teams can win cash prizes, mentorship opportunities, internships, and cool tech gadgets worth over $10,000!</p>
+                </div>
+            </div>
+    
+            <div class="faq-card">
+                <div class="faq-front">
+                    <h3>What support will I get? 🚀</h3>
+                </div>
+                <div class="faq-back">
+                    <p>You'll receive mentorship, workshops, technical resources, and guidance throughout the ideathon. Our experts are here to help you succeed!</p>
+                </div>
+            </div>
+    
+            <div class="faq-card">
+                <div class="faq-front">
+                    <h3>How are ideas evaluated? ⭐</h3>
+                </div>
+                <div class="faq-back">
+                    <p>Projects are judged on innovation, feasibility, impact, and presentation. Our expert panel will evaluate based on creativity and real-world application.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+    <section id="faqs">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="question-text">Who can participate? 🤔</span>
+                    <div class="faq-content">
+                        <p>Students aged 12-18 from any school or region can participate! We welcome young innovators interested in technology, design, and problem-solving. Join us to showcase your creativity!</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="question-text">What's the registration process? 📝</span>
+                    <div class="faq-content">
+                        <p>Simple! Just fill out our online form, create your team (2-4 members), and submit your initial idea proposal. We'll guide you through each step of the registration process.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="question-text">Are there any fees? 💰</span>
+                    <div class="faq-content">
+                        <p>Absolutely free! The ideathon is completely free for all participants. We believe in making innovation accessible to everyone, so there are no hidden charges.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="question-text">What can I win? 🏆</span>
+                    <div class="faq-content">
+                        <p>Amazing prizes await! Top teams can win cash prizes, mentorship opportunities, internships, and cool tech gadgets worth over $10,000! Every participant gets a certificate.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Samarthya 2025</div>
+            <div class="footer-links">
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="footer-social">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+        <p>&copy; 2025 Samarthya Youth Ideathon. All rights reserved.</p>
     </footer>
 
-    <!-- Scripts -->
-    <script src="scripts/main.js"></script>
-</body>
+    <script src="scripts/main.js"></script></body>
 </html>
