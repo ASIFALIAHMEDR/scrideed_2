@@ -195,3 +195,79 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+// added code for the countdown timer
+const targetDate = new Date('2025-02-01T00:00:00').getTime();
+
+function updateCountdown() {
+    const now = new Date().getTime();
+    const timeLeft = targetDate - now;
+
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+    updateFlipCard('days', days);
+    updateFlipCard('hours', hours);
+    updateFlipCard('minutes', minutes);
+    updateFlipCard('seconds', seconds);
+}
+
+function updateFlipCard(unit, value) {
+    const card = document.querySelector(`.${unit}`);
+    const currentValue = card.querySelector('.flip-card-top').textContent;
+    const newValue = value.toString().padStart(2, '0');
+
+    if (currentValue !== newValue) {
+        const flipCardInner = card.querySelector('.flip-card-inner');
+        
+        // Remove existing flip class
+        flipCardInner.classList.remove('flip');
+        
+        // Update back card values first
+        card.querySelector('.flip-card-back-top').textContent = newValue;
+        card.querySelector('.flip-card-back-bottom').textContent = newValue;
+        
+        // Force a reflow to ensure the removal of the class takes effect
+        void flipCardInner.offsetWidth;
+        
+        // Add flip class to trigger animation
+        flipCardInner.classList.add('flip');
+        
+        // Update front card values after animation
+        setTimeout(() => {
+            card.querySelector('.flip-card-top').textContent = newValue;
+            card.querySelector('.flip-card-bottom').textContent = newValue;
+            flipCardInner.classList.remove('flip');
+        }, 600);
+    }
+}
+
+// Update the countdown every second
+setInterval(updateCountdown, 1000);
+
+// Initial update
+updateCountdown();
+
+// Add card tilt effect on hover (optional)
+document.querySelectorAll('.flip-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        const rotateX = (y - centerY) / 10;
+        const rotateY = (centerX - x) / 10;
+        
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+    
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+    });
+});
