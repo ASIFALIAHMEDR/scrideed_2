@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // added code for the countdown timer
-const targetDate = new Date('2025-02-01T00:00:00').getTime();
+const targetDate = new Date('2025-04-14T00:00:00').getTime();
 
 function updateCountdown() {
     const now = new Date().getTime();
