@@ -773,7 +773,56 @@
 .feature-text {
   color: #666;
 }
+.partners-section {
+  padding: 60px 0;
+  text-align: center;
+  background-color: #f8f9fa;
+}
 
+.partners-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.partner-item {
+  width: 460px;
+  height: 280px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: fadeInScale 0.8s forwards;
+}
+
+.partner-item:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partner-logo {
+  max-width: 100%;
+  max-height: 250px;
+}
+
+@keyframes fadeInScale {
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}  
 /* CTA Section */
 .announcement-cta {
   text-align: center;
