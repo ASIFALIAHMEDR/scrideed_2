@@ -823,6 +823,46 @@
       transform: scale(1);
   }
 }  
+@media screen and (max-width: 768px) {
+  .section-title {
+      font-size: 24px;
+      margin-bottom: 30px;
+  }
+  
+  .partner-item {
+      width: 180px;
+      height: 100px;
+  }
+  
+  .partner-logo {
+      max-width: 75%;
+      max-height: 60px;
+  }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+  .section-title {
+      font-size: 20px;
+      margin-bottom: 20px;
+  }
+  
+  .partner-item {
+      width: 140px;
+      height: 80px;
+  }
+  
+  .partner-logo {
+      max-width: 70%;
+      max-height: 50px;
+  }
+}
+
+.partner-item:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 /* CTA Section */
 .announcement-cta {
   text-align: center;
