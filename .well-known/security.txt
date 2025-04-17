@@ -1,0 +1,6 @@
+Contact: mailto:tech@scrideed.com
+Expires: 2025-12-31T23:59:00.000Z
+
+Acknowledgements: https://scrideed.com/hall-of-fame.html
+
+Preferred-Languages: en
