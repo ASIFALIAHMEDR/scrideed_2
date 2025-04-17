@@ -1,0 +1,41 @@
+/*
+  # ------------------------------------------------------------
+  # SECURITY HEADERS
+  # ------------------------------------------------------------
+
+  # Only allow content from your domain + trusted sources (e.g., Google Fonts, Elfsight)
+  Content-Security-Policy: 
+    default-src 'self'; 
+    script-src 'self' https://cdnjs.cloudflare.com https://static.elfsight.com; 
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
+    font-src https://fonts.gstatic.com; 
+    img-src 'self' data: https:; 
+    connect-src 'self'; 
+    frame-ancestors 'none';
+
+  # Prevent your site from being framed (clickjacking protection)
+  X-Frame-Options: DENY
+
+  # Prevent MIME-type sniffing
+  X-Content-Type-Options: nosniff
+
+  # Obscure referrer data for better privacy
+  Referrer-Policy: strict-origin-when-cross-origin
+
+  # Restrict browser features for privacy & security
+  Permissions-Policy: 
+    camera=(), 
+    microphone=(), 
+    geolocation=(), 
+    usb=(), 
+    accelerometer=(), 
+    autoplay=(), 
+    encrypted-media=(), 
+    fullscreen=(self), 
+    payment=()
+
+  # Enforce HTTPS with preloading (2-year expiry)
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+
+  # Optional: prevent caching sensitive pages (e.g., login pages)
+  Cache-Control: no-store
