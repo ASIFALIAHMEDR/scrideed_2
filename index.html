@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ScrideEd - Learn.Dream.Build.</title>
     <link rel="icon" type="image/png" href="scrideGearLogo-rbg.png"/>
-
+    <link rel="preload" href="/assets/images/hero-image.webp" as="image" type="image/webp">
+    <link rel="preload" href="styles/main.css" as="style">
+    <link rel="preload" href="fonts/Inter.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
     
     <!-- CSS -->
     <link rel="stylesheet" href="styles/main.css">
@@ -71,7 +74,7 @@
             </figure> -->
             <picture>
                 <source srcset="hero-image.webp" type="image/webp">
-                <img src="hero-image.jpg" alt="Hero Image" width="600" height="400" loading="lazy">
+                <img src="hero-image.webp" alt="Hero Image" width="600" height="400" loading="lazy">
               </picture>
         </section>
     
@@ -79,7 +82,7 @@
     <section class="empower">
         <div class="empower-wrapper">
             <div class="empower-image">
-                <img src="../assets/images/empower-image.png" alt="Image">
+                <img src="../assets/images/empower-image.png" alt="empower" loading="lazy" width="400" height="300">
             </div>
             <div class="empower-content">
                 <h1>
@@ -267,6 +270,6 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="scripts/main.js"></script>
+    <script src="scripts/main.js" defer></script>
 </body>
 </html>
