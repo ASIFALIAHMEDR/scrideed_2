@@ -1,0 +1,335 @@
+
+/* Reset & Basics */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0b0f1a;
+  color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Utility Classes */
+.section {
+  padding: 4rem 2rem;
+}
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.section-desc {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+.center {
+  text-align: center;
+}
+.flex {
+  display: flex;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.center-center {
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  margin: 0.5rem;
+}
+.primary-btn {
+  background-color: #00f9ff;
+  color: #000;
+}
+.outline-btn {
+  background: transparent;
+  border: 1px solid #00f9ff;
+  color: #00f9ff;
+}
+
+/* Hero Section */
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+.hero-text {
+  flex: 1;
+  padding-right: 2rem;
+}
+.hero-gif {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Service Cards */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.service-tile {
+  background: #121c2b;
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s, background 0.3s;
+}
+.service-tile:hover {
+  transform: translateY(-10px);
+  background: #1d2b44;
+}
+.card-icon {
+  width: 40px;
+  margin-bottom: 1rem;
+}
+
+/* Approach Cards */
+.approach-card {
+  background: #1a2433;
+  border: 1px solid #00f9ff33;
+  padding: 1.5rem;
+  width: 250px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.approach-card:hover {
+  transform: translateY(-8px);
+  background: #1f2e4a;
+}
+
+/* Client Carousel */
+/* .client-carousel {
+  overflow: hidden;
+  padding: 2rem 0;
+}
+.client-strip {
+  display: flex;
+  gap: 2rem;
+  animation: slide-left 20s linear infinite;
+}
+.client-strip img {
+  height: 50px;
+}
+
+@keyframes slide-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+} */
+
+#clients {
+    background: #0c111a;
+    padding: 3rem 15rem;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .client-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 1rem 2rem; /* This adds the padding on both sides */
+  }
+  
+  .client-track {
+    display: flex;
+    gap: 10rem;
+    width: max-content;
+    animation: scrollClients 30s linear infinite;
+    align-items: center;
+  }
+  
+  .client-carousel:hover .client-track {
+    animation-play-state: paused;
+  }
+  
+  .client-track img {
+    height: 150px;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(1.2);
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .client-track img:hover {
+    filter: grayscale(0%) brightness(1.5);
+    transform: scale(1.05);
+  }
+  
+  @keyframes scrollClients {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  
+
+/* Footer */
+footer {
+  background: #060a13;
+  color: #ddd;
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+}
+.footer-column ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Light/Dark Theme */
+.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+.light-mode .section {
+  background-color: #f5f5f5;
+}
+.light-mode .service-tile {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+}
+.light-mode .approach-card {
+  background-color: #ffffff;
+}
+.light-mode footer {
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+  }
+  .hero-text, .hero-gif {
+    padding: 0;
+    text-align: center;
+  }
+}
+
+
+/* Header Styling */
+.main-header {
+  background: rgba(10, 10, 35, 0.95);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+.logo-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+.logo-title .accent {
+  color: #2dd4bf;
+}
+.nav-links a {
+  margin-left: 1.5rem;
+  font-weight: 500;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #2dd4bf;
+}
+
+/* Responsive Nav */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* Adjust background transitions */
+body {
+  background: linear-gradient(to bottom, #0a0a23, #12163d);
+}
+.light-mode {
+  background: linear-gradient(to bottom, #ffffff, #e5e7eb);
+}
+
+
+.theme-toggle-icon {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: transform 0.3s;
+}
+.theme-toggle-icon:hover {
+  transform: scale(1.2);
+}
+
+.hero-cta-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-cta-buttons {
+    justify-content: center;
+  }
+}
+
+/* Refined CTA section */
+#ready {
+  background: #131f37;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+#ready .section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+#ready .section-desc {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
