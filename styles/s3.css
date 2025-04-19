@@ -226,6 +226,7 @@ ul {
     padding: 3rem 1.5rem;
     overflow: hidden;
     position: relative;
+    margin-bottom: 10rem;
   }
   
   #clients .section-title {
@@ -250,7 +251,7 @@ ul {
     min-width: 100%;
     width: max-content;
     will-change: transform;
-    padding: 0 1rem;
+    padding: 0 15rem;
   }
   
   /* Pause on hover */
@@ -259,7 +260,7 @@ ul {
   }
   
   .client-track img {
-    height: 60px;
+    height: 100px;
     object-fit: contain;
     flex-shrink: 0;
     filter: grayscale(100%) brightness(1.2);
@@ -283,12 +284,12 @@ ul {
   /* Mobile responsive */
   @media (max-width: 768px) {
     .client-track {
-      gap: 1rem;
+      gap: 9rem;
       padding: 0 0.5rem;
     }
   
     .client-track img {
-      height: 60px;
+      height: 150px;
     }
   
     #clients .section-title {
