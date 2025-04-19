@@ -70,7 +70,7 @@ ul {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 4rem 2rem;
+  padding: 4rem 4rem;
 }
 .hero-text {
   flex: 1;
@@ -102,7 +102,7 @@ ul {
   background: #1d2b44;
 }
 .card-icon {
-  width: 40px;
+  width: 60px;
   margin-bottom: 1rem;
 }
 
@@ -156,7 +156,7 @@ ul {
   
   .client-track {
     display: flex;
-    gap: 10rem;
+    gap: 9rem;
     width: max-content;
     animation: scrollClients 30s linear infinite;
     align-items: center;
@@ -167,7 +167,7 @@ ul {
   }
   
   .client-track img {
-    height: 150px;
+    height: 110px;
     object-fit: contain;
     filter: grayscale(100%) brightness(1.2);
     transition: transform 0.3s ease, filter 0.3s ease;
@@ -181,6 +181,24 @@ ul {
   @keyframes scrollClients {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
+  }
+
+  @media (max-width: 768px) {
+    .client-carousel {
+      padding: 1rem;
+    }
+  
+    .client-track {
+      gap: 1rem;
+    }
+  
+    .client-track img {
+      height: 36px;
+    }
+  
+    #clients .section-title {
+      font-size: 1.5rem;
+    }
   }
   
 
