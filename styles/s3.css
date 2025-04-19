@@ -64,6 +64,26 @@ ul {
   color: #00f9ff;
 }
 
+.nav-links.active {
+  display: flex; /* Show links when toggled */
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--color-primary);
+}
 /* Hero Section */
 .hero-container {
   display: flex;
