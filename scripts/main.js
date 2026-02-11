@@ -1,5 +1,4 @@
-// Add this to your main JavaScript file
-
+// ===== LOADER FUNCTIONALITY =====
 document.addEventListener('DOMContentLoaded', () => {
     // Hide loader when page is loaded
     window.addEventListener('load', () => {
@@ -27,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// ===== MOBILE MENU TOGGLE =====
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.mobile-menu-toggle');
     const navLinks = document.querySelector('.nav-links');
@@ -53,7 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-// Optional: Function to manually show/hide loader
+
+// ===== MANUAL LOADER FUNCTIONS =====
 function showLoader() {
     const loader = document.getElementById('loader');
     loader.classList.remove('fade-out');
@@ -68,15 +69,16 @@ function hideLoader() {
     }, 500);
 }
 
+// ===== HERO PARALLAX & ANIMATIONS =====
 document.addEventListener('DOMContentLoaded', () => {
-    // Previous JavaScript remains the same, with these additions:
-
     // Parallax Effect for Hero Section
     const hero = document.getElementById('hero');
-    window.addEventListener('scroll', () => {
-        const scrollPosition = window.pageYOffset;
-        hero.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
-    });
+    if (hero) {
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.pageYOffset;
+            hero.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
+        });
+    }
 
     // Scroll-Triggered Reveal Animations
     const revealElements = document.querySelectorAll('#timeline .timeline-item, #judges .judge-card, #panelists .panelist-card');
@@ -100,6 +102,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const statsElements = document.querySelectorAll('.hero-stats h3');
     statsElements.forEach(stat => {
         const target = parseInt(stat.textContent);
+        if (isNaN(target)) return;
+        
         let current = 0;
 
         const updateCounter = () => {
@@ -117,66 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
-document.addEventListener('DOMContentLoaded', () => {
-    const faqQuestions = document.querySelectorAll('.faq-question');
-    const faqPopup = document.createElement('div');
-    faqPopup.classList.add('faq-popup');
-    document.body.appendChild(faqPopup);
-
-    faqQuestions.forEach(question => {
-        question.addEventListener('click', () => {
-            const answer = question.nextElementSibling.textContent;
-            
-            faqPopup.innerHTML = `
-                <div class="faq-popup-content">
-                    <h3>${question.textContent}</h3>
-                    <p>${answer}</p>
-                    <button class="close-popup">Close</button>
-                </div>
-            `;
-            
-            faqPopup.style.display = 'flex';
-        });
-    });
-
-    // Close popup
-    document.addEventListener('click', (e) => {
-        if (e.target.classList.contains('close-popup') || 
-            e.target.classList.contains('faq-popup')) {
-            faqPopup.style.display = 'none';
-        }
-    });
-});
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    const faqItems = document.querySelectorAll('.faq-item');
-
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        const answer = item.querySelector('.faq-answer');
-
-        question.addEventListener('click', () => {
-            // Toggle active class
-            item.classList.toggle('active');
-
-            // Slide toggle answer
-            if (item.classList.contains('active')) {
-                answer.style.maxHeight = answer.scrollHeight + 'px';
-                answer.style.opacity = '1';
-            } else {
-                answer.style.maxHeight = '0';
-                answer.style.opacity = '0';
-            }
-        });
-    });
-});
-
-
-
-//added
-
+// ===== FAQ ACCORDION =====
 document.addEventListener('DOMContentLoaded', () => {
     const faqQuestions = document.querySelectorAll('.faq-question');
 
@@ -196,8 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
-// added code for the countdown timer
+// ===== COUNTDOWN TIMER =====
 const targetDate = new Date('2025-04-14T00:00:00').getTime();
 
 function updateCountdown() {
@@ -217,6 +161,8 @@ function updateCountdown() {
 
 function updateFlipCard(unit, value) {
     const card = document.querySelector(`.${unit}`);
+    if (!card) return;
+    
     const currentValue = card.querySelector('.flip-card-top').textContent;
     const newValue = value.toString().padStart(2, '0');
 
@@ -271,3 +217,99 @@ document.querySelectorAll('.flip-card').forEach(card => {
         card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
     });
 });
+
+// ===== KITS SECTION - INTERSECTION OBSERVER & ANIMATIONS =====
+// THIS IS THE CRITICAL FIX - Adds the 'visible' class to kit cards
+document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Make section header visible
+          const header = entry.target.querySelector('.section-header');
+          if (header) header.classList.add('visible');
+          
+          // Make cards visible with staggered delay - THIS IS KEY!
+          const cards = entry.target.querySelectorAll('.kit-card');
+          cards.forEach(card => {
+            card.classList.add('visible');
+          });
+          
+          // Make scroll indicator visible
+          const scrollIndicator = entry.target.querySelector('.scroll-indicator');
+          if (scrollIndicator) scrollIndicator.classList.add('visible');
+          
+          // Unobserve after animation
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.2 // Trigger when 20% of the section is visible
+    });
+    
+    
+    // Observe the kits section
+    const kitsSection = document.getElementById('kits-section');
+    if (kitsSection) {
+      observer.observe(kitsSection);
+    }
+    
+    // Lazy loading images (for browsers that don't support native lazy loading)
+    if ('loading' in HTMLImageElement.prototype) {
+      // Browser supports native lazy loading
+      console.log('Browser supports native lazy loading');
+    } else {
+      // Fallback lazy loading implementation
+      const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+      
+      const lazyImageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.removeAttribute('data-src');
+            lazyImageObserver.unobserve(img);
+          }
+        });
+      });
+      
+      lazyImages.forEach(img => {
+        lazyImageObserver.observe(img);
+      });
+    }
+    
+    // Add scroll buttons functionality
+    function checkScroll() {
+      const container = document.getElementById('kits-container');
+      if (container) {
+        // Check if scrollable content is wider than container
+        const isScrollable = container.scrollWidth > container.clientWidth;
+        
+        // Show/hide scroll indicator based on scrollability
+        const scrollIndicator = document.querySelector('.scroll-indicator');
+        if (scrollIndicator) {
+          if (!isScrollable) {
+            scrollIndicator.style.display = 'none';
+          }
+        }
+        
+        // Check if we're at the end of scrolling to potentially hide right arrow
+        const isAtEnd = container.scrollLeft + container.clientWidth >= container.scrollWidth - 10;
+      }
+    }
+    
+    // Run on load and on resize
+    window.addEventListener('load', checkScroll);
+    window.addEventListener('resize', checkScroll);
+    
+    // Optional: Add keyboard navigation for accessibility
+    const container = document.getElementById('kits-container');
+    if (container) {
+      container.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') {
+          container.scrollBy({ left: 320, behavior: 'smooth' });
+        } else if (e.key === 'ArrowLeft') {
+          container.scrollBy({ left: -320, behavior: 'smooth' });
+        }
+      });
+    }
+  });
