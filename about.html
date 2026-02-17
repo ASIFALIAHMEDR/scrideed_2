@@ -40,228 +40,101 @@
     </nav>
 </header>
 
-    <main>
-        <style>
-            .team-section {
-              padding: 80px 0;
-              background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            }
-          
-            .team-container {
-              max-width: 1200px;
-              margin: 0 auto;
-              padding: 0 20px;
-            }
-          
-            .team-header {
-              text-align: center;
-              margin-bottom: 60px;
-            }
-          
-            .team-header h2 {
-              font-size: 2.5rem;
-              color: #333;
-              margin-bottom: 20px;
-              font-weight: 700;
-            }
-          
-            .team-header p {
-              font-size: 1.1rem;
-              color: #666;
-              max-width: 600px;
-              margin: 0 auto;
-              line-height: 1.6;
-            }
-          
-            .team-grid {
-              display: grid;
-              grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-              gap: 40px;
-              padding: 20px;
-            }
-          
-            .team-member {
-              background: white;
-              border-radius: 20px;
-              overflow: hidden;
-              box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-              transition: transform 0.3s ease, box-shadow 0.3s ease;
-              position: relative;
-            }
-          
-            .team-member:hover {
-              transform: translateY(-10px);
-              box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-            }
-          
-            /* .member-image {
-              width: 100%;
-              height: 300px;
-              position: relative;
-              overflow: hidden;
-            }
-          
-            .member-image img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              transition: transform 0.5s ease;
-            } */
-            .member-image {
-                width: 100%;
-                height: 300px;
-                position: relative;
-                overflow: hidden;
-                padding: 20px; /* Added padding */
-            }
+  <section id="about" class="about-section">
+  <div class="container">
 
-            .member-image img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                transition: transform 0.5s ease;
-                border-radius: 15px; /* Added to give the image rounded corners */
-            }
-          
-            .team-member:hover .member-image img {
-              transform: scale(1.1);
-            }
-          
-            .member-info {
-              padding: 25px;
-              text-align: center;
-            }
-          
-            .member-info h3 {
-              font-size: 1.5rem;
-              color: #333;
-              margin-bottom: 10px;
-            }
-          
-            .member-info .role {
-              color: #666;
-              font-size: 1.1rem;
-              margin-bottom: 15px;
-            }
-          
-            .member-bio {
-              color: #777;
-              font-size: 0.95rem;
-              line-height: 1.6;
-              margin-bottom: 20px;
-              height: 0;
-              opacity: 0;
-              overflow: hidden;
-              transition: all 0.3s ease;
-            }
-          
-            .team-member:hover .member-bio {
-              height: 80px;
-              opacity: 1;
-            }
-          
-            .social-links {
-              display: flex;
-              justify-content: center;
-              gap: 15px;
-              padding-top: 15px;
-              border-top: 1px solid #eee;
-            }
-          
-            .social-links a {
-              width: 35px;
-              height: 35px;
-              border-radius: 50%;
-              background: #f8f9fa;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              color: #333;
-              text-decoration: none;
-              transition: all 0.3s ease;
-            }
-          
-            .social-links a:hover {
-              background: #007bff;
-              color: white;
-              transform: rotate(360deg);
-            }
-          
-            @media (max-width: 768px) {
-              .team-grid {
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-              }
-            }
-          </style>
-          
-          <section class="team-section">
-            <div class="team-container">
-              <div class="team-header">
-                <h2>Meet Our Team</h2>
-                <p>Passionate educators and technology enthusiasts working together to revolutionize online learning.</p>
-              </div>
-              
-              <div class="team-grid">
-                <!-- Team Member 1 -->
-                <div class="team-member">
-                  <div class="member-image">
-                    <img src="./assets/images/asif.png" alt="Asif Ali Ahmed R">
-                  </div>
-                  <div class="member-info">
-                    <h3>Asif Ali Ahmed R</h3>
-                    <div class="role">Chief Technical Officer</div>
-                    <div class="member-bio">
-                    A tech innovator with expertise in building scalable educational platforms and interactive learning tools.
-                    </div>
-                    <div class="social-links">
-                      <a href="#"><i class="fab fa-linkedin"></i></a>
-                      <a href="#"><i class="fab fa-twitter"></i></a>
-                      <a href="#"><i class="fab fa-github"></i></a>
-                    </div>
-                  </div>
-                </div>
-          
-                <!-- Team Member 2 -->
-                <div class="team-member">
-                  <div class="member-image">
-                    <img src="./assets/images/pandyan.png" alt="Pandyan K">
-                  </div>
-                  <div class="member-info">
-                    <h3>Pandyan K</h3>
-                    <div class="role">Chief Executive Officer</div>
-                    <div class="member-bio">
-                      A tech innovator with expertise in building scalable educational platforms and interactive learning tools.
-                    </div>
-                    <div class="social-links">
-                      <a href="#"><i class="fab fa-linkedin"></i></a>
-                      <a href="#"><i class="fab fa-twitter"></i></a>
-                      <a href="#"><i class="fab fa-github"></i></a>
-                    </div>
-                  </div>
-                </div>
-          
-                <!-- Team Member 3 -->
-                <div class="team-member">
-                  <div class="member-image">
-                    <img src="./api/placeholder/400/300" alt="Fardeen Ahmed">
-                  </div>
-                  <div class="member-info">
-                    <h3>Fardeen Ahmed</h3>
-                    <div class="role">Head of Content</div>
-                    <div class="member-bio">
-                      An experienced educator passionate about creating engaging and effective learning experiences.
-                    </div>
-                    <div class="social-links">
-                      <a href="#"><i class="fab fa-linkedin"></i></a>
-                      <a href="#"><i class="fab fa-twitter"></i></a>
-                      <a href="#"><i class="fab fa-github"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-    </main>
+    <!-- Hero -->
+    <div class="about-hero">
+      <h1>We’re Not Just Building Robots.<br>We’re Building the Humans Who Run Them.</h1>
+      <p class="about-intro">
+        Let’s be real: the world is changing faster than most school curriculums can keep up with. 
+        While the real world is launching rockets, coding neural networks, and automating… well, everything, 
+        most students are still memorizing formulas they may never use.
+      </p>
+      <p>
+        At <strong>Scride Ed</strong>, we think that’s a bug in the system. So we’re here to fix it.
+      </p>
+    </div>
+
+    <!-- Who We Are -->
+    <div class="about-block">
+      <h2>Who We Are</h2>
+      <p>
+        Scride Ed is an ed-tech playground built specifically for K–12 students who are tired of hearing 
+        “you’ll learn that when you’re older.”
+      </p>
+      <p>
+        We don’t do boring lectures. We do high-octane, hands-on learning in 
+        <strong>Robotics, AI, and Next-Gen Technology</strong>.
+      </p>
+      <p>
+        We’re a community of young creators, late-night coders, and endlessly curious minds who believe 
+        that age is a terrible metric for potential.
+      </p>
+    </div>
+
+    <!-- Why We're Different -->
+    <div class="about-block">
+      <h2>Why We’re Different</h2>
+
+      <div class="about-feature">
+        <h3>Human-First Tech</h3>
+        <p>
+          AI and Robotics can feel cold and intimidating. We make them approachable, ethical, 
+          and—dare we say—fun.
+        </p>
+      </div>
+
+      <div class="about-feature">
+        <h3>The "Messy" Method</h3>
+        <p>
+          We believe in the power of the First Draft. Build it. Break it. Fix it. Improve it. 
+          That’s where real learning happens.
+        </p>
+      </div>
+
+      <div class="about-feature">
+        <h3>Future-Proofing</h3>
+        <p>
+          We aren’t just teaching Python or mechanical assembly. We’re teaching problem-solving agility. 
+          The tools of today may become relics tomorrow—but a sharp mind lasts forever.
+        </p>
+      </div>
+    </div>
+
+    <!-- Mission -->
+    <div class="about-block mission">
+      <h2>Our Mission</h2>
+      <p>
+        To bridge the gap between “I’m interested in tech” and 
+        <strong>“I just built an autonomous drone.”</strong>
+      </p>
+      <p>
+        We empower the next generation to stop being passive consumers of technology 
+        and start becoming its architects.
+      </p>
+      <p>
+        Whether you want to save the planet, launch a startup, or build a robot that cleans your room, 
+        Scride Ed is your launchpad.
+      </p>
+    </div>
+
+    <!-- Scride Vibe -->
+    <div class="about-block vibe">
+      <h2>The Scride Vibe</h2>
+      <p>
+        We’re professional, but not “suits.”  
+        We’re experts, but also lifelong students.  
+        We speak the language of the future—but keep our feet firmly on the ground.
+      </p>
+
+      <blockquote>
+        “The best way to predict the future is to build it yourself.”
+      </blockquote>
+    </div>
+
+  </div>
+</section>
 
     <footer class="site-footer">
         <div class="container">
