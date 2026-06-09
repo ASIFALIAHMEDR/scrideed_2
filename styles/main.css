@@ -776,13 +776,15 @@
 .partners-section {
   padding: 60px 0;
   text-align: center;
-  background-color: #f8f9fa;
+  background-color: #eecd3b;
 }
 
 .partners-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  display: flex;
+  gap: 50px;
 }
 
 .section-title {
